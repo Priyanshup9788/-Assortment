@@ -1,0 +1,51 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int row,col,r,c,r_sum=0,c_sum=0;
+    printf("Enter the array's row size:- ");
+    scanf("%d",&row);
+    
+    printf("Enter the array's column size:- ");
+    scanf("%d",&col);
+    int arr[row][col];
+    
+    printf("Enter Array Elemnts:- ");
+    
+    for(int i=0;i<row;i++)
+    {
+        for(int j=0;j<col;j++)
+        {
+            printf("arr[%d][%d]:-",i,j);
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    
+    //row
+    
+    printf("Enter row number:- ");
+    scanf("%d",&r);
+    
+    printf("Elements of row %d:- ",r);
+    for(int i=0;i<col;i++)
+    {
+        printf("%d ",arr[r][i]);
+        r_sum+=arr[r][i];
+    }
+    printf("\nThe sum of a row %d:- %d",r,r_sum);
+    
+    //column
+    
+    printf("\nEnter column number:- ");
+    scanf("%d",&c);
+    
+    printf("Elements of column %d:- ",c);
+    for(int i=0;i<row;i++)
+    {
+        printf("%d ",arr[i][c]);
+        c_sum+=arr[i][c];
+    }
+    printf("\nThe sum of a row %d:- %d",c,c_sum);
+    
+    return 0;
+}
